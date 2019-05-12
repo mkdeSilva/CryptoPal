@@ -1,2 +1,2 @@
 # CryptoPal
-iOS Crypto Currency app using the BX.in.th API
+iOS Cryptocurrency app using the BX.in.th API
