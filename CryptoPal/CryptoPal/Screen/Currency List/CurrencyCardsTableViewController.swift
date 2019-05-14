@@ -18,7 +18,7 @@ class CurrencyCardsTableViewController: UITableViewController {
         }
     }
     
-    let cellSpacingHeight: CGFloat = 10
+    let cellSpacingHeight: CGFloat = 5
     
     @IBAction func refresh(_ sender: UIRefreshControl) {
         CurrencyServiceAPI.shared.getData { (result : Result<CurrencyServiceAPI.PairingData, CurrencyServiceAPI.APIServiceError>) in

@@ -16,4 +16,8 @@ import UIKit
     @IBOutlet weak var highPriceLabel: UILabel!
     @IBOutlet weak var lowPriceLabel: UILabel!
     @IBOutlet weak var avgPriceLabel: UILabel!
+    
+    override func configure() {
+        self.backgroundColor = Colors.detailBgColor
+    }
 }

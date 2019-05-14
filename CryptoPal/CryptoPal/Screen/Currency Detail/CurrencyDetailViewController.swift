@@ -11,7 +11,7 @@ import Charts
 
 class CurrencyDetailViewController: UIViewController {
     
-    @IBOutlet weak var lineChart: LineChartView!
+    @IBOutlet weak var lineChart: DetailLineChartView!
     @IBOutlet weak var currencyDetailView : CurrencyDetailView?
     
     var dateFormatter : DateFormatter = {
@@ -26,7 +26,7 @@ class CurrencyDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupChartView()
+        lineChart.setupChartView()
         updateView()
     }
     
@@ -37,46 +37,7 @@ class CurrencyDetailViewController: UIViewController {
         self.viewModel = viewModel
         getPriceHistory(viewModel)
     }
-    
-    private func setupChartView() {
-        let noDataTextColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-        lineChart.noDataTextColor = noDataTextColor
-        lineChart.noDataText = "Getting chart data"
-    }
-    
-    func setChartData(with dataPoints : [String], values : [Double])
-    {
-        var dataEntries : [ChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
-            dataEntries.append(dataEntry)
-        }
-        
-        let chartDataSet = LineChartDataSet(entries: dataEntries, label: "")
-        let chartData = LineChartData(dataSet: chartDataSet)
-        lineChart.data = chartData
-        
-        
-        
-        let gradientColors = [UIColor.cyan.cgColor, UIColor.clear.cgColor] as CFArray
-        let colorLocations:[CGFloat] = [1.0, 0.0]
-        let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
-        
-        chartDataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90)
-        chartDataSet.drawFilledEnabled = true
-        
-        lineChart.leftAxis.labelTextColor = .white
-        lineChart.xAxis.labelTextColor = .white
-        lineChart.xAxis.labelPosition = .bottom
-        lineChart.rightAxis.enabled = false
-        lineChart.legend.enabled = false
-        chartDataSet.drawCirclesEnabled = false
-        chartDataSet.drawValuesEnabled = false
-        lineChart.animate(xAxisDuration: 0.7, yAxisDuration: 0.7, easingOption: .easeInSine)
-        
-    }
-    
+
     private func updateView()
     {
         guard let viewModel = viewModel else {
@@ -133,12 +94,8 @@ class CurrencyDetailViewController: UIViewController {
             }
             
             let sortedData = chartData.sorted() {$0.date < $1.date}
-            setChartData(with: sortedData.map() {$0.date }, values: sortedData.map() {$0.averagePrice })
+            lineChart.setChartData(with: sortedData.map() {$0.date }, values: sortedData.map() {$0.averagePrice })
         }
     }
 }
 
-struct PriceChartData {
-    let averagePrice : Double
-    let date : String
-}

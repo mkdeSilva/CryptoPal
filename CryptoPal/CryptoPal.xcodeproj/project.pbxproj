@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18090A34228A504B00CCEECA /* DetailLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090A33228A504B00CCEECA /* DetailLineChartView.swift */; };
 		182333322282EA8100DB2B3F /* CurrencyServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182333312282EA8100DB2B3F /* CurrencyServiceAPI.swift */; };
 		182333362282FEA700DB2B3F /* CurrencyPairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182333352282FEA700DB2B3F /* CurrencyPairing.swift */; };
 		182333382282FEDE00DB2B3F /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182333372282FEDE00DB2B3F /* OrderBook.swift */; };
 		1823333A2282FEFE00DB2B3F /* OrderEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182333392282FEFE00DB2B3F /* OrderEntry.swift */; };
-		184DF24C2285AD5600F3CE63 /* CurrencyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184DF24B2285AD5600F3CE63 /* CurrencyCardView.swift */; };
 		184DF24E2285B0D300F3CE63 /* CGContextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184DF24D2285B0D300F3CE63 /* CGContextExtensions.swift */; };
 		184DF2502285BC2700F3CE63 /* URLSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184DF24F2285BC2700F3CE63 /* URLSessionExtensions.swift */; };
 		184DF25222868D1700F3CE63 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 184DF25122868D1700F3CE63 /* Podfile */; };
@@ -36,11 +36,11 @@
 
 /* Begin PBXFileReference section */
 		11791198D5624FB44CCC684E /* libPods-CryptoBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CryptoBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18090A33228A504B00CCEECA /* DetailLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLineChartView.swift; sourceTree = "<group>"; };
 		182333312282EA8100DB2B3F /* CurrencyServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceAPI.swift; sourceTree = "<group>"; };
 		182333352282FEA700DB2B3F /* CurrencyPairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPairing.swift; sourceTree = "<group>"; };
 		182333372282FEDE00DB2B3F /* OrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBook.swift; sourceTree = "<group>"; };
 		182333392282FEFE00DB2B3F /* OrderEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderEntry.swift; sourceTree = "<group>"; };
-		184DF24B2285AD5600F3CE63 /* CurrencyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCardView.swift; sourceTree = "<group>"; };
 		184DF24D2285B0D300F3CE63 /* CGContextExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGContextExtensions.swift; sourceTree = "<group>"; };
 		184DF24F2285BC2700F3CE63 /* URLSessionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtensions.swift; sourceTree = "<group>"; };
 		184DF25122868D1700F3CE63 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -155,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				18897EE12286A5F2005F106C /* CurrencyDetailView.swift */,
+				18090A33228A504B00CCEECA /* DetailLineChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,7 +194,6 @@
 		1897E3C822851C920079CBB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				184DF24B2285AD5600F3CE63 /* CurrencyCardView.swift */,
 				1897E3CB22851CD30079CBB6 /* CurrencyCardTableViewCell.swift */,
 			);
 			path = Views;
@@ -331,10 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18915E752286EA54004A0E78 /* CurrencyMonthData.swift in Sources */,
-				184DF24C2285AD5600F3CE63 /* CurrencyCardView.swift in Sources */,
 				1897E3D0228520760079CBB6 /* Models.swift in Sources */,
 				1897E3CA22851CA90079CBB6 /* CurrencyCardsTableViewController.swift in Sources */,
 				182333382282FEDE00DB2B3F /* OrderBook.swift in Sources */,
+				18090A34228A504B00CCEECA /* DetailLineChartView.swift in Sources */,
 				1897E3CC22851CD30079CBB6 /* CurrencyCardTableViewCell.swift in Sources */,
 				18915E842287E88C004A0E78 /* PriceChangeUILabel.swift in Sources */,
 				182333322282EA8100DB2B3F /* CurrencyServiceAPI.swift in Sources */,

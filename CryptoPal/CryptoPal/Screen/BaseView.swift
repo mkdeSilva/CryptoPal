@@ -21,7 +21,6 @@ import UIKit
     }
     
     func configure() {
-        backgroundColor = Colors.bgColor
     }
 
 }

@@ -21,8 +21,11 @@ class CurrencyCardTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        
         currencyPriceLabel.adjustsFontSizeToFitWidth = true
         currencyNameLabel.adjustsFontSizeToFitWidth = true
+        cellView.backgroundColor = Colors.cardBgColor
+        self.backgroundColor = .clear
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,9 +37,6 @@ class CurrencyCardTableViewCell: UITableViewCell {
         bgView.backgroundColor = Colors.selectedBgColor
         self.selectedBackgroundView = bgView
     }
-    
-    
-    
     
     public func configure(with viewModel : CurrencyCardViewModel)
     {

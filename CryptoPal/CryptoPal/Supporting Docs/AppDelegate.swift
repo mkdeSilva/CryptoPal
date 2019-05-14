@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         
         let nav = storyboard.instantiateViewController(withIdentifier: "CurrencyNavigationController") as? UINavigationController
-        
+        nav?.navigationBar.barTintColor = Colors.navBarTintColor
         window?.makeKeyAndVisible()
         window?.rootViewController = nav
         
